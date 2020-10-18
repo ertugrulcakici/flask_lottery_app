@@ -1,8 +1,5 @@
-from flask import Flask,render_template,redirect,url_for,session,request,flash
 from random import choice
-from forms import loginform,itemform
-from functools import wraps
-from wtforms import Form,StringField,TextAreaField,PasswordField,validators
+from flask import Flask, render_template, request
 app = Flask(__name__)
 
 @app.route('/',methods=["GET","POST"])
@@ -16,18 +13,6 @@ def index():
         return render_template("index.html",willadd=False,data=newdata)
     else:
         return render_template("index.html",willadd=True)
-
-# @app.route('/login', methods=['GET', 'POST'])
-# def login():
-#     pass
-#
-# @app.route('/register', methods=['GET', 'POST'])
-# def register():
-#     pass
-#
-# @app.route('/logout')
-# def logout():
-#     pass
 
 if __name__=="__main__":
     app.run(debug=True,host="192.168.1.32",port=80)
