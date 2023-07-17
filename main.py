@@ -12,7 +12,7 @@ def index():
         newdata = dict()
         newdata["winner"] = choice(data)
         data.remove(newdata["winner"])
-        newdata["Subsitute"] = choice(data)
+        newdata["substitute"] = choice(data)
         return render_template("index.html", willAdd=False, data=newdata)
     else:
         return render_template("index.html", willAdd=True)
