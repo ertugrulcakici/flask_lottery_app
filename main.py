@@ -13,9 +13,9 @@ def index():
         newdata["winner"] = choice(data)
         data.remove(newdata["winner"])
         newdata["Subsitute"] = choice(data)
-        return render_template("index.html", willadd=False, data=newdata)
+        return render_template("index.html", willAdd=False, data=newdata)
     else:
-        return render_template("index.html", willadd=True)
+        return render_template("index.html", willAdd=True)
 
 
 if __name__ == "__main__":
